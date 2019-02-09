@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+int n1=0;                                                                                       //variable 1
+int n2=1;                                                                                       //varibale 2
+int n3;                                                                                         //varibale 3 for third term
+int count;                                                                                      //variable 4 for user input 
+int fib ( int number )                                                                          //This is Fibonacci sequence function
+{
+  
+
+  if (number==0)                                                                                //if count is only zero only return zero
+ {return 0;}                                                                                    //if count is more than zero output zero + fibonacci
+ else{cout<<n1<<endl;}
+
+  for (int i=1;i<number;i++){
+      
+      if(i>number){
+        break;
+      }
+       
+      n3=n1+n2;                                                                                 //First term and second counter are added == thrid term
+      n1=n2;                                                                                    //First term swapped to second term  
+      n2=n3;                                                                                    //previous third term become second term. Repeat 
+      cout<<n3<<endl;
+      }
+    }
+  
+
+int main (){
+  cout << "Enter positive integer for number of term 0-46: ";                                   //Ask user for a positive number
+  cin >>  count;
+  
+    
+  
+    
+  
+  if ( count<0 ){                                                                               //If  user enter negative number, invalid
+    cout<< "Invalid integer, positive integer only\nEnter positive integer: ";
+    cin >> count;
+    
+  }
+  else if ( count > 46){                                                                        //If user's integer more than C++ can handle, invalid  
+    cout<< "Invalid integer, the number too large to handle\nEnter smaller positive integer";
+    cin >> count;
+  }
+  if ( cin.fail()){                                                                             //If user does not enter integer, exist out
+    cout<< "Error input";
+      
+    }
+  else{cout<< "This is Fibonacci Sequence\n"<<fib(count)<<endl;
+    
+    
+    
+
+return 0;
+}
+  }
+
